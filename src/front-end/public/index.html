@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyAccess - Accessible Login</title>
+    <meta name="description" content="My Access is an universally accessible login platform that is able to accommodate users with visual, physical or learning disability.">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="blocked-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><b>Blocked</b></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your computer was blocked because you chose the wrong password 5 times. Please, wait 30min and then try again.</p>
+                <div class="modal-footer">
+                </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" registration-modal ng-controller="RegistrationController">
+        <div ng-if="user_data" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><b>Registration</b></h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Name</label>
+                            <div class="col-md-9">
+                                <input type="text" disabled class="form-control" ng-model="user_data.formattedName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Recovery email</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" ng-value="user_data.emailAddress">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" ng-click="submit(user_data)" class="btn btn-primary" data-dismiss="modal">Next</button>
+                </div>
+            </div><!-- /modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><b>My Access</b></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" ng-view></div>
+
+    <!-- JS includes -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-cookies.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/satellizer/0.14.0/satellizer.min.js"></script>
+
+    <!-- App -->
+    <script src="/app/app.module.js"></script>
+    <script src="/app/app.config.js"></script>
+
+    <!-- Services -->
+    <script src="/app/services/data.service.js"></script>
+
+    <!-- Controllers -->
+    <script src="/app/controllers/home.controller.js"></script>
+    <script src="/app/controllers/login.controller.js"></script>
+    <script src="/app/controllers/dashboard.controller.js"></script>
+    <script src="/app/controllers/about.controller.js"></script>
+    <script src="/app/controllers/registration.controller.js"></script>
+
+    <!-- Directives -->
+    <script src="/app/directives/registration.modal.directive.js"></script>
+    </body>
+</html>

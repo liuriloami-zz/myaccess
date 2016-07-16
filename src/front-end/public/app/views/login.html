@@ -1,0 +1,68 @@
+<div class="login" style="background: {{ bg}}" ng-init="bg = '#FFFFFF'">
+    <div class="container">
+        <a href="#" ng-click="previous()" ng-if="cur != 5"><img class="pull-left back-button" src="/images/gui/back.png"></a>
+        <div class="btn-group pull-right bg-color">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Background color <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu bg-menu">
+                <li><a class="bg-white" href="#" ng-click="bg = '#FFFFFF'">White</a></li>
+                <li><a class="bg-blue" href="#" ng-click="bg = '#446CB3'">Blue</a></li>
+                <li><a class="bg-green" href="#" ng-click="bg = '#00B16A'">Green</a></li>
+                <li><a class="bg-orange" href="#" ng-click="bg = '#E67E22'">Orange</a></li>
+                <li><a class="bg-red" href="#" ng-click="bg = '#EC644B'">Red</a></li>
+            </ul>
+        </div>
+        <div ng-if="cur == 0">
+            <h2>{{ steps[cur].title }}</h2>
+            <div class="clearfix"></div>
+            <div class="row login-col-2">
+                <div class="col-md-6">
+                    <a href="#" ng-click="next(steps[cur].images[0])">
+                        <img ng-src="{{ steps[cur].images[0] }}">
+                        <p>Female</p>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" ng-click="next(steps[cur].images[1])">
+                        <img ng-src="{{ steps[cur].images[1] }}">
+                        <p>Male</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="login-scroll" ng-if="cur != 0 && cur != 5">
+            <h2>{{ steps[cur].title }}</h2>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-6" ng-repeat="image in steps[cur].images">
+                    <a href="#" ng-click="next(image)">
+                        <img class="{{ steps[cur].padding ? 'img-padding' : '' }}" ng-src="{{ image }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="login-scroll confirmation-step" ng-if="cur == 5">
+            <h2>Is this your password?</h2>
+            <div class="clearfix"></div>
+            <div class="confirm pull-left"><a href="#" ng-click="reset()"><img src="/images/gui/back.png"></a></div>
+            <div class="confirm pull-right"><a href="#" ng-click="confirm()"><img src="/images/gui/tick.png"></a></div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <img ng-src="{{ choice[2] }}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col">
+                    <img class="img-padding" ng-src="{{ choice[1] }}">
+                </div>
+                <div class="col-md-2 col">
+                    <img ng-src="{{ choice[3] }}">
+                </div>
+                <div class="col-md-2 col">
+                    <img ng-src="{{ choice[4] }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

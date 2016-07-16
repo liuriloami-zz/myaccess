@@ -1,0 +1,25 @@
+<div class="home">
+    <h5><b>My Access</b> is an universally accessible login platform that is able to accommodate users with visual, physical or learning disability.</h5>
+    <div class="row login-col-2">
+        <div class="col-md-6">
+            <a href="/login" ng-if="Data.wrong_tries < 5">
+                <img src="/images/gui/login.png">
+                <p class="login-text">Enter using your account</p>
+            </a>
+            <a href="#" ng-if="Data.wrong_tries >= 5" data-toggle="modal" data-target="#blocked-modal">
+                <img src="/images/gui/login.png">
+                <p class="login-text">Enter using your account</p>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="#" ng-click="register()" ng-if="Data.wrong_tries < 5">
+                <img src="/images/gui/signup.png">
+                <p class="register-text">Register now using your LinkedIn account</p>
+            </a>
+            <a href="#" ng-if="Data.wrong_tries >= 5" data-toggle="modal" data-target="#blocked-modal">
+                <img src="/images/gui/signup.png">
+                <p class="register-text">Register now using your LinkedIn account</p>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,233 @@
+*:focus {
+    outline: none !important;
+}
+
+.register {
+    color: #0077b5;
+}
+
+.home, .login {
+    text-align: center;
+}
+
+.home h5 {
+    margin-bottom: 5rem;
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.home a, .login a {
+    text-decoration: none !important;
+}
+
+.login-col-2 .login-text {
+    color: #040;
+}
+
+.login-col-2 .register-text {
+    color: #d35400;
+}
+
+.login-col-2 {
+    margin-top: calc(50vh - 23rem);
+}
+
+.login-col-2 img {
+    height: 25rem;
+}
+
+.home p, .login p {
+    margin: 1.5rem 0;
+    padding: 0 15rem;
+    font-size: 1.7rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.back-button {
+    height: 6rem;
+    margin-top: 0.75rem;
+}
+
+.bg-color button {
+    padding: 0.75rem 2rem;
+    margin-top: -0.25rem;
+}
+
+.login-scroll img {
+    height: 20rem;
+    margin: 3rem 0 0;
+    border: 1px solid #aaa;
+    padding: 0;
+    border-radius: 3.25rem;
+    width: 20rem;
+    object-fit: cover;
+}
+
+.login-scroll img:hover {
+    opacity: 0.7;
+}
+
+.confirmation-step {
+    position: relative;
+}
+
+.confirmation-step img:hover {
+    opacity: 1;
+}
+
+
+.login-scroll h2 {
+    padding-left: 16.5rem;
+}
+
+.login-scroll .col-md-6:nth-child(2n+1) {
+    text-align: right;
+}
+
+.login-scroll .col-md-6:nth-child(2n) {
+    text-align: left;
+}
+
+.img-padding {
+    padding: 1rem !important;
+}
+
+.login-scroll .col-md-6:nth-child(2n+1) img {
+    margin-right: 4rem;
+}
+
+.login-scroll .col-md-6:nth-child(2n) img {
+    margin-left: 4rem;
+}
+
+.confirm {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    transform: translateY(-100%);
+}
+
+
+.confirm img {
+    border: none;
+    width: auto;
+    height: 11rem;
+    cursor: pointer;
+}
+
+.confirm.pull-right img {
+    right: 7rem;
+}
+
+.bg-blue {
+    background: #446CB3;
+    color: white !important;
+}
+
+.bg-blue:hover {
+    background: #244C93 !important;
+}
+
+.bg-green {
+    background: #00B16A;
+    color: white !important;
+}
+
+.bg-green:hover {
+    background: #00914A !important;
+}
+
+.bg-orange {
+    background: #E67E22;
+    color: white !important;
+}
+
+.bg-orange:hover {
+    background: #C65E02 !important;
+}
+
+.bg-red {
+    background: #EC644B;
+    color: white !important;
+}
+
+.bg-red:hover {
+    background: #CC442B !important;
+}
+
+.bg-menu {
+    padding: 0;
+}
+
+.bg-menu li a {
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.login {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    height: calc(100vh - 50px - 1.5rem);
+    padding-top: 1rem;
+}
+
+.bg-color {
+    padding-top: 2rem;
+}
+
+.confirmation-step .pull-right {
+    right: 0;
+}
+
+.confirmation-step .pull-left {
+    left: 0;
+}
+
+.confirmation-step .col-md-6 {
+    text-align: center !important;
+}
+
+.confirmation-step .col:first-child {
+    text-align: right;
+    width: 40%;
+}
+
+.confirmation-step .col:nth-child(2) {
+    text-align: center;
+    width: 20%;
+}
+
+.confirmation-step .col:last-child {
+    text-align: left;
+    width: 40%;
+}
+
+.dashboard img {
+    height: 20rem;
+    width: 80%;
+    object-fit: cover;
+    margin: 3rem 10%;
+}
+
+.dashboard button {
+    border-radius: 0;
+    padding: 0.7rem 6rem;
+}
+
+label.control-label {
+    text-align: center !important;
+}
+
+label.control-label:first-child {
+    text-align: right !important;
+}
+
+.about p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 1.5rem 0;
+}
